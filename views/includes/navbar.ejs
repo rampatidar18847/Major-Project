@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-light bg-body-light border-bottom sticky-top">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/listings">Explore</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" method="post" action="/listings/navsearchbar">
+          <input class="form-control mr-sm-2" name="search" id="search" type="search" placeholder="Search locations" aria-label="Search">
+          <button class="btn" id="search-button" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-item nav-link" href="/listings/new">Add List</a>
+
+        <% if(!curr_user){ %>
+        <a class="nav-item nav-link" href="/signup"><b>Sign up</b></a>
+        <a class="nav-item nav-link" href="/login"><b>Log In</b></a>
+        <%} %>
+
+        <% if(curr_user) { %>
+        <a class="nav-item nav-link" href="/logout"><b>Log Out</b></a>
+        <% } %>
+      </div>
+    </div>
+  </nav>

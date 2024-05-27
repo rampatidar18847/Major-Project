@@ -1,0 +1,51 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+  <div class="col-6 offset-3">
+    <form method="POST" action="/listings" validate class="needs-validation" enctype="multipart/form-data">
+      <h3 class="text-center" style="color: #fe424d">Create New List</h3>
+      <label for="title">Title:</label><br />
+      <input type="text" id="title" name="listing[title]" required /><br />
+
+      <label for="description">Description:</label><br />
+      <textarea id="description" name="listing[description]" required></textarea
+      ><br />
+
+      <label for="image">Upload Image:</label><br />
+      <input type="file" id="image" name="listing[image]" required /><br />
+
+      <label for="price">Price:</label><br />
+      <input type="text" id="price" name="listing[price]" required /><br />
+
+      <label for="location">Location:</label><br />
+      <input
+        type="text"
+        id="location"
+        name="listing[location]"
+        required
+      /><br />
+
+      <label for="country">Country:</label><br />
+      <input type="text" id="country" name="listing[country]" required /><br />
+      <br />
+
+      <label for="category">Category:</label><br />
+      <select id="category" name="listing[category]" required>
+        <option value="Trending">Trending</option>
+        <option value="Rooms">Rooms</option>
+        <option value="Iconic Cities">Iconic Cities</option>
+        <option value="Mountains">Mountains</option>
+        <option value="Pools">Pools</option>
+        <option value="Castles">Castles</option>
+        <option value="Farms">Farms</option>
+        <option value="Domes">Domes</option>
+        <option value="Boats">Boats</option>
+        <option value="Beachs">Beachs</option>
+      </select>
+      <br />
+      <br />
+
+      <button type="submit" class="submit" >Add</button>
+    </form>
+  </div>
+</body>

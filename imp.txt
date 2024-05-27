@@ -1,0 +1,3 @@
+mongodb+srv://rampatidar20668:HjC9rG1tJkOVtuXr@cluster0.ec1wdme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+password : HjC9rG1tJkOVtuXr
